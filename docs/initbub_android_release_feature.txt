@@ -1,0 +1,22 @@
+=======================
+0.2
+?/?/2013
+=======================
+117	- Crash when changing orientation to landscape
+118	- add message activity size
+
+=======================
+0.1
+5/13/2013
+=======================
+53 - consistent format for message create date
+54 - track/sync local db with remote
+55 - implement timer service to sync with remote db
+101 - configure and test with inithub prod url
+102 - message api call only returning 20 records
+103 - refactor msg add
+56 - notification when new messages arrive
+57 - add settings/preferences
+107 - text on message activity
+
+

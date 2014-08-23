@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="message_progress_adding_message">Adding message&#8230;</string> 
+    <string name="message_refresh_message">Refreshing&#8230;</string> 
+    <string name="action_add_short">Add</string>
+    <string name="menu_message_add">Add new comment</string>
+    <string name="msg_add_progress_sending">Sending&#8230;</string>
+    <string name="no_messages">No Messages</string>
+</resources>

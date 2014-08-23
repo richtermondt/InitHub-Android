@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">InitHub</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="body_activity_splash">SplashActivity</string>
+    <string name="title_activity_subject">SubjectActivity</string>
+    <string name="title_activity_inbox">InboxActivity</string>
+    <string name="company">Solutiosoft</string>
+    <string name="signout">Sign out</string>
+    <string name="refresh">Refresh</string>
+    <string name="template_user_agent" translatable="false">"%1$s/%2$s (Linux; Android)"</string>
+    <string name="title_activity_message">Messages</string>
+    <string name="title_activity_message_add">Add Message</string>
+
+</resources>

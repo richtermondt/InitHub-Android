@@ -1,0 +1,36 @@
+===========================
+Release Management notes
+===========================
+
+===========================
+Steps
+===========================
+1. 
+2. 
+3. 
+
+===========================
+hg on webfaction
+===========================
+
+rtermondt@RTERMONDT-LP01 ~/django_projects
+hg push ssh://rtermondt@hg.solutiosoft.com/hg/django_projects
+ssh rtermondt@hg.solutiosoft.com 'cd hg/django_projects && hg update'
+
+rtermondt@RTERMONDT-LP01 ~/static_web/ihub_static
+hg push ssh://rtermondt@hg.solutiosoft.com/hg/ihub_static
+ssh rtermondt@hg.solutiosoft.com 'cd hg/ihub_static && hg update'
+
+===========================
+rsync
+===========================
+[rtermondt@web341 solutiosoft]$ pwd
+/home/rtermondt/hg/django_projects/solutiosoft
+rsync -tvr --exclude-from '/home/rtermondt/hg/django_projects/solutiosoft/exclude-list.txt' /home/rtermondt/hg/django_projects/solutiosoft/ /home/rtermondt/webapps/inithub/solutiosoft/
+
+rsync -tvr --exclude-from '/home/rtermondt/hg/ihub_static/exclude-list.txt' /home/rtermondt/hg/ihub_static/ /home/rtermondt/webapps/ihub_static/
+
+===========================
+hg on webfaction - pull/clone
+===========================
+hg clone ssh://rtermondt@hg.solutiosoft.com/hg/django_projects 

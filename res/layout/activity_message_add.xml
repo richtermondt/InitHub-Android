@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".LoginActivity" >
+    <!-- Login progress -->
+
+    <LinearLayout
+        android:id="@+id/msg_add_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/msg_add_status_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/login_progress_signing_in"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+    
+	<LinearLayout 
+	    	android:id="@+id/msg_add_form"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent" 
+	        android:orientation="vertical" >
+	
+		<EditText
+		    android:id="@+id/message_comment_edit" 
+	        android:layout_width="300dp"
+	        android:layout_height="150dp"
+	        android:gravity="top"
+	        android:inputType="textMultiLine|textNoSuggestions"
+	        />
+
+		<Button
+		    android:id="@+id/add_message_button"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginTop="16dp"
+		    android:paddingLeft="32dp"
+		    android:paddingRight="32dp"
+		    android:text="@string/action_add_short" />
+
+		<TextView
+		    android:id="@+id/msg_add_alert"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content" />
+	
+	</LinearLayout>
+</merge>

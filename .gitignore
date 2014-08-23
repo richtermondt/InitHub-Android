@@ -1,0 +1,10 @@
+# Backup files left behind by the Emacs editor.
+*~
+# Temporary files used by the vim editor.
+.*.swp
+# A hidden file created by the Mac OS X Finder.
+.DS_Store
+
+# Eclipse
+bin
+dist

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.solutiosoft.android.inithub"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:configChanges="orientation|screenSize"
+            android:name="com.solutiosoft.android.inithub.ui.SubjectActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.solutiosoft.android.inithub.ui.SubjectActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.solutiosoft.android.inithub.ui.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+            <intent-filter>
+                <action android:name="com.solutiosoft.android.inithub.ui.LoginActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.solutiosoft.android.inithub.ui.SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.solutiosoft.android.inithub.ui.InboxActivity"
+            android:label="@string/title_activity_inbox" >
+            <intent-filter>
+                <action android:name="com.solutiosoft.android.inithub.ui.InboxActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="com.solutiosoft.android.inithub.provider.SubjectProvider"
+            android:authorities="com.solutiosoft.android.inithub"
+            android:enabled="true"
+            android:exported="false" >
+        </provider>
+
+        <service
+            android:name="com.solutiosoft.android.inithub.service.SubjectIntentService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":SubjectService" >
+        </service>
+
+        <activity
+            android:configChanges="orientation|screenSize"
+            android:name="com.solutiosoft.android.inithub.ui.MessageActivity"
+            android:label="@string/title_activity_message" >
+            <intent-filter>
+                <action android:name="com.solutiosoft.android.inithub.ui.MessageActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.solutiosoft.android.inithub.service.MessageIntentService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+
+        <provider
+            android:name="com.solutiosoft.android.inithub.provider.MessageProvider"
+            android:authorities="com.solutiosoft.android.inithub.messages"
+            android:enabled="true"
+            android:exported="true" >
+        </provider>
+
+        <activity
+            android:name="com.solutiosoft.android.inithub.ui.SettingsActivity"
+            android:label="@string/title_activity_settings" >
+            <intent-filter>
+                <action android:name="com.solutiosoft.android.inithub.ui.SettingsActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.solutiosoft.android.inithub.ui.MessageAddActivity"
+            android:label="@string/title_activity_message_add" >
+            <intent-filter>
+                <action android:name="com.solutiosoft.android.inithub.ui.MessageAddActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="com.solutiosoft.android.inithub.AlarmReceiver"
+            android:enabled="true"
+            android:exported="true" >
+        </receiver>
+        <receiver
+            android:name="com.solutiosoft.android.inithub.BootupReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

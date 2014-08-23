@@ -1,0 +1,36 @@
+=======================
+Content:
+=======================
+
+=======================
+Database changes: None
+=======================
+
+=======================
+Settings Changes: None
+=======================
+
+=======================
+changes to webfaction: None
+=======================
+
+=======================
+Backlog:
+=======================
+
+===========================
+Install - hg on webfaction
+===========================
+
+rtermondt@RTERMONDT-LP01 ~/django_projects
+hg push ssh://rtermondt@hg.solutiosoft.com/hg/django_projects
+ssh rtermondt@hg.solutiosoft.com 'cd hg/django_projects && hg update'
+
+
+===========================
+Install - rsync
+===========================
+
+=======================
+Install Output:
+=======================

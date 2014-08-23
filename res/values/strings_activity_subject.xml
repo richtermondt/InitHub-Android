@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="subject_progress_loading">Loading Subjects&#8230;</string>
+    <string name="no_subjects">No Subjects</string>
+</resources>
