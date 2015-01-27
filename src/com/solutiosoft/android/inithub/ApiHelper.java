@@ -65,9 +65,9 @@ public class ApiHelper {
 	private String ApiToken;
 	private String subjectList;
 	private String messageList;
-	private static final String MESSAGE_PATH = "/innohub/api/message/";
-	private static final String API_TOKEN_PATH = "/innohub/api/token/auth/";
-	private static final String SUBJECT_PATH = "/innohub/api/subject/";
+	private static final String MESSAGE_PATH = "/manager/api/message/";
+	private static final String API_TOKEN_PATH = "/manager/api/token/auth/";
+	private static final String SUBJECT_PATH = "/manager/api/subject/";
 	
 	
 	//public final static ApiHelper INSTANCE = new ApiHelper();
@@ -453,7 +453,7 @@ public class ApiHelper {
     private String secureAuthenticate(String username, String password, Context context) {
     	
     	try {
-	    	URI uri = new URI(ApiToken);	    	
+	    	URI uri = new URI(ApiToken);
 	    	
 	    	DefaultHttpClient httpClient = getSecureHttpClient();
 	    	
@@ -475,7 +475,6 @@ public class ApiHelper {
 
             // Return result from buffered stream
             String content =  getHttpResponse(response);	        
-	        
             return getApiKeyFromJsonResponse(content);
 	    }
     	catch(URISyntaxException e){

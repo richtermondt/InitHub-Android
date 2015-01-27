@@ -35,7 +35,6 @@ public class AlarmReceiver extends BroadcastReceiver {
 		// an Intent broadcast.
 		
 		// we need to call the intent service here
-		Log.d(TAG, "*********** AlarmReceiver.onReceive");
 		InitHubDatabaseManager db = new InitHubDatabaseManager(context);
 		ArrayList<Integer> subjects = db.getSubscribedSubjects();
 		Intent newIntent = new Intent(context, MessageIntentService.class);
@@ -64,18 +63,15 @@ public class AlarmReceiver extends BroadcastReceiver {
 
 		if(sync_frequency!= null){
 			if(sync_frequency.equals("-1")){
-				Log.d(TAG, "Canceling alarm.........");
 				alarmManager.cancel(pendingIntent);
 			}
 			else {
 				int i;
 				try {
 					i = Integer.parseInt(sync_frequency);
-					Log.d(TAG, "Starting alarm... Frequency: " + i + " minutes");
 					i = Integer.parseInt(sync_frequency);
 					alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, 0, (60 * 1000), pendingIntent);
 				} catch (NumberFormatException e) {
-					Log.d(TAG, "NumberFormatException... This should not happen. Canceling alarm.");
 					alarmManager.cancel(pendingIntent);
 				}
 				
